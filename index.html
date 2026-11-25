@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="text-scale" content="scale">
     <meta name="description" content="A directory of sites and web apps made by Joomya.">
     <meta name="theme-color" content="#f7f4ec">
     <title>Joomya’s Web Directory</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles.css">
-    <script type="module" src="./directory.mjs"></script>
   </head>
   <body>
     <div class="page">
@@ -28,23 +28,11 @@
         <section class="directory" aria-labelledby="directory-heading">
           <div class="section-header">
             <h2 id="directory-heading">The directory</h2>
-            <p id="site-count"></p>
+            <p id="site-count"><!-- site-count --></p>
           </div>
-          <noscript><p>Enable JavaScript to see the directory.</p></noscript>
-          <ul id="site-list" class="site-list" role="list"></ul>
-          <template id="site-template">
-            <li class="site">
-              <div class="site-top">
-                <span class="site-number" aria-hidden="true"></span>
-                <span class="site-status"></span>
-              </div>
-              <h3></h3>
-              <p class="summary"></p>
-              <div class="site-links">
-                <a class="site-link">Visit site <span aria-hidden="true">↗</span></a>
-              </div>
-            </li>
-          </template>
+          <ul id="site-list" class="site-list" role="list">
+            <!-- site-list -->
+          </ul>
         </section>
       </main>
 
