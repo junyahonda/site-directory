@@ -8,7 +8,6 @@ for (const [index, site] of sites.entries()) {
   const card = template.content.firstElementChild.cloneNode(true);
   const status = card.querySelector('.site-status');
   const link = card.querySelector('.site-link');
-  const repo = card.querySelector('.repo-link');
 
   card.querySelector('.site-number').textContent = String(index + 1).padStart(2, '0');
   card.querySelector('h3').textContent = site.name;
@@ -24,13 +23,6 @@ for (const [index, site] of sites.entries()) {
     domain.className = 'site-domain';
     domain.textContent = new URL(site.url).hostname;
     link.replaceWith(domain);
-  }
-
-  if (site.repo) {
-    repo.href = site.repo;
-    repo.setAttribute('aria-label', `Source: ${site.name}`);
-  } else {
-    repo.remove();
   }
 
   list.append(card);

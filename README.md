@@ -7,7 +7,7 @@ A one-page list of Joomya’s websites, published through GitHub Pages at
 
 Edit [`sites.mjs`](sites.mjs) and add or update one entry. Entries display in
 file order. Each entry needs a `name`, an HTTPS `url`, a short `summary`,
-and a `status` of `live` or `coming soon`. An HTTPS `repo` link is optional.
+and a `status` of `live` or `coming soon`.
 For a coming-soon site the directory shows its planned address as text; switch
 the status to `live` once the URL works.
 
