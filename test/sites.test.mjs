@@ -7,7 +7,7 @@ test('directory entries have unique names and HTTPS addresses', () => {
   const names = new Set();
   const urls = new Set();
 
-  for (const { name, url, repo, summary, status } of sites) {
+  for (const { name, url, summary, status, ...rest } of sites) {
     assert.ok(typeof name === 'string' && name.trim(), 'Site name is required');
     assert.ok(typeof summary === 'string' && summary.trim(), `${name} needs a summary`);
     assert.ok(['live', 'coming soon'].includes(status), `${name} has an invalid status`);
@@ -20,8 +20,6 @@ test('directory entries have unique names and HTTPS addresses', () => {
     names.add(nameKey);
     urls.add(address.href);
 
-    if (repo !== undefined) {
-      assert.equal(new URL(repo).protocol, 'https:', `${name} must have an HTTPS source URL`);
-    }
+    assert.deepEqual(Object.keys(rest), [], `${name} has unsupported fields`);
   }
 });
