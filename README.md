@@ -13,7 +13,15 @@ the status to `live` once the URL works.
 
 ## Preview and check
 
-Run `python3 -m http.server 8000` from the repository root and open
-<http://localhost:8000/>. No packages or build are required. Use Node.js 24
-to run `node --test`. The Directory workflow runs those checks on pull
-requests and deploys the static files after a passing check on `main`.
+With Node.js 24, run the following from the repository root and open
+<http://localhost:8000/>:
+
+```sh
+mkdir -p _site
+cp 404.html styles.css favicon.svg CNAME _site/
+node scripts/render-directory.mjs > _site/index.html
+python3 -m http.server 8000 --directory _site
+```
+
+No packages are required. The Directory workflow runs `node --test` on pull
+requests and deploys the generated HTML after a passing check on `main`.

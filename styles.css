@@ -1,6 +1,8 @@
 :root {
   color-scheme: light;
   font-family: system-ui, sans-serif;
+  -webkit-text-size-adjust: auto;
+  text-size-adjust: auto;
   background: #f7f4ec;
   color: #182820;
   --green: #163b2c;
@@ -83,8 +85,9 @@ body, h1, h2, h3, p { margin: 0; }
 
 h1 {
   margin-block: .55rem .9rem;
-  font: 400 clamp(3.25rem, 10vw, 6.5rem)/.92 Georgia, serif;
+  font: 400 3.25rem/.92 Georgia, serif;
   letter-spacing: -.055em;
+  overflow-wrap: anywhere;
 }
 
 h1 span { color: var(--orange); }
@@ -95,6 +98,20 @@ h1 span { color: var(--orange); }
   font-size: .9375rem;
   line-height: 1.55;
 }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 2.75rem;
+  margin-top: .75rem;
+  color: var(--orange);
+  font-size: .875rem;
+  font-weight: 750;
+  text-underline-offset: .22em;
+}
+
+.back-link:focus-visible { outline-color: var(--orange); }
 
 .directory { margin-top: 1.65rem; }
 
@@ -231,11 +248,13 @@ footer {
 
 @media (min-width: 42rem) {
   .masthead { padding-block: 1.6rem; }
+  h1 { font-size: 4.5rem; }
   .directory { margin-top: 2rem; }
   .site-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .site { padding: 1.15rem 1.25rem .6rem; }
 }
 
 @media (min-width: 62rem) {
+  h1 { font-size: 6.5rem; }
   .site-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
