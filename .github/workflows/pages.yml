@@ -33,6 +33,11 @@ jobs:
         run: |
           mkdir _site
           cp index.html styles.css directory.mjs sites.mjs favicon.svg CNAME _site/
+          v="${GITHUB_SHA::12}"
+          sed -i "s#\./directory\.mjs#./directory.mjs?v=$v#; s#\./styles\.css#./styles.css?v=$v#" _site/index.html
+          sed -i "s#'\./sites\.mjs'#'./sites.mjs?v=$v'#" _site/directory.mjs
+          grep -q "directory.mjs?v=$v" _site/index.html
+          grep -q "sites.mjs?v=$v" _site/directory.mjs
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
