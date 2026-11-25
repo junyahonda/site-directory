@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A directory of sites and web apps made by Joomya.">
+    <meta name="theme-color" content="#f7f4ec">
+    <title>Joomya’s Web Directory</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./directory.mjs"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="masthead">
+        <span class="mark" aria-hidden="true">J</span>
+        <span>Joomya’s web directory</span>
+      </header>
+
+      <main>
+        <header class="hero">
+          <div class="orbit" aria-hidden="true"></div>
+          <p class="eyebrow">Made by Joomya</p>
+          <h1>Sites I’ve<br>built<span>.</span></h1>
+          <p class="intro">From splitting dinner to tracking Deadlock matches. Here’s what you can use now and what’s coming next.</p>
+        </header>
+
+        <section class="directory" aria-labelledby="directory-heading">
+          <div class="section-header">
+            <h2 id="directory-heading">The directory</h2>
+            <p id="site-count"></p>
+          </div>
+          <noscript><p>Enable JavaScript to see the directory.</p></noscript>
+          <ul id="site-list" class="site-list" role="list"></ul>
+          <template id="site-template">
+            <li class="site">
+              <div class="site-top">
+                <span class="site-number" aria-hidden="true"></span>
+                <span class="site-status"></span>
+              </div>
+              <h3></h3>
+              <p class="summary"></p>
+              <div class="site-links">
+                <a class="site-link">Visit site <span aria-hidden="true">↗</span></a>
+                <a class="repo-link">Source</a>
+              </div>
+            </li>
+          </template>
+        </section>
+      </main>
+
+      <footer>Made by Joomya <span aria-hidden="true">✳</span></footer>
+    </div>
+  </body>
+</html>
