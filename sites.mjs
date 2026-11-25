@@ -37,7 +37,8 @@ export const sites = [
   {
     name: 'Deal Digest',
     url: 'https://deals.junyahonda.com/',
-    summary: 'A daily roundup of the top five Slickdeals from the past 24 hours.',
-    status: 'coming soon',
+    repo: 'https://github.com/junyahonda/deal-digest',
+    summary: 'See the top five deals posted on Slickdeals in the last 24 hours, ranked by community activity.',
+    status: 'live',
   },
 ];
