@@ -8,7 +8,7 @@ export const sites = [
   },
   {
     name: 'Deadlock Stats',
-    url: 'https://junyahonda.com/deadlock-stats/',
+    url: 'https://deadlock.junyahonda.com/',
     repo: 'https://github.com/junyahonda/deadlock-stats',
     summary: 'Look up a Steam account to see recent Deadlock matches, win rate, and KDA, or explore the data-driven hero tier list.',
     status: 'live',
